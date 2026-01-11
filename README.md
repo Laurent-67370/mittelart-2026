@@ -20,51 +20,32 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 
 ## ✨ Fonctionnalités du site
 
-- 📱 Design responsive (mobile, tablette, desktop)
-- 🎨 Palette de couleurs harmonisée avec l'affiche
-- 📍 Google Maps intégré
-- 📅 Ajout au calendrier (Google, Apple, Outlook)
-- 📤 Partage réseaux sociaux (Facebook, Twitter, WhatsApp)
-- ⏱️ Compte à rebours avant l'événement
-- 🔍 SEO optimisé avec Schema.org
-- ✨ Animations au scroll
-- 🖼️ Open Graph pour les aperçus de partage
+- 📱 **Design responsive** : Adapté mobiles, tablettes et desktops
+- 🎨 **Identité visuelle** : Palette de couleurs harmonisée avec l'affiche officielle
+- ⚡ **Performance** : Optimisation des chargements et stratégie de cache (voir `netlify.toml`)
+- 📸 **Galerie interactive** : Lightbox pour visualiser les œuvres et souvenirs
+- 📅 **Calendrier** : Ajout direct à Google, Apple et Outlook
+- 📤 **Partage** : Intégration réseaux sociaux (Facebook, Twitter, WhatsApp)
+- ⏱️ **Compte à rebours** : Timer dynamique avant l'événement
+- 🔍 **SEO** : Optimisé avec Schema.org, Sitemap et Robots.txt
+- ✨ **Animations** : Effets d'apparition au scroll (Intersection Observer)
 
 ---
 
 ## 📁 Structure des fichiers
 
-```
+```text
 mittelart-2026/
-├── index.html                              # Page principale
-├── og-image.jpg                            # Image pour partage réseaux sociaux
-├── flyer.jpg                               # Affiche édition 2025
-├── article-dna.jpg                         # Article DNA
-├── article-sculptures.jpg                  # Article sculptures
-├── file_00000000e7cc71f48c36f423e80364c5.png  # Affiche 2026
-└── README.md                               # Ce fichier
-```
-
----
-
-## 🚀 Hébergement
-
-Site hébergé sur [Netlify](https://www.netlify.com/) avec déploiement automatique depuis ce repository GitHub.
-
----
-
-## 📜 Historique
-
-- **2012** : Création de Mittel'art par Henri Husser
-- **2025** : 13ème édition
-- **2026** : 14ème édition (ce site)
-
----
-
-## 📝 Licence
-
-© 2026 Mittel'art — Tous droits réservés
-
----
-
-*Site créé avec ❤️ pour promouvoir l'art régional en Alsace*
+├── index.html                  # Page principale (Structure)
+├── styles.css                  # Styles graphiques (Variables CSS, Responsive)
+├── script.js                   # Logique (Compte à rebours, Lightbox, Menu)
+├── poster-2026.png             # Affiche officielle 2026
+├── flyer.jpg                   # Affiche édition 2025 (Archive)
+├── og-image.jpg                # Image optimisée pour le partage social
+├── article-dna.jpg             # Presse : Article DNA
+├── article-sculptures.jpg      # Presse : Article sculptures
+├── IMAGE-OPTIMIZATION.md       # Guide technique d'optimisation des images
+├── netlify.toml                # Configuration de build et headers HTTP
+├── robots.txt                  # Directives pour les robots d'indexation
+├── sitemap.xml                 # Plan du site XML
+└── README.md                   # Documentation du projet
