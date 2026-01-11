@@ -1,0 +1,25 @@
+# robots.txt pour Mittel'art 2026
+# https://mittelart-2026.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://mittelart-2026.netlify.app/sitemap.xml
+
+# Crawl-delay pour être respectueux des serveurs
+Crawl-delay: 1
+
+# Fichiers et dossiers à ne pas indexer
+Disallow: /cdn-cgi/
+Disallow: /*.tmp$
+Disallow: /*_head.tmp$
+Disallow: /*_body.tmp$
+
+# Permettre l'indexation des ressources importantes
+Allow: /styles.css
+Allow: /script.js
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
