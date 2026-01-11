@@ -1,0 +1,103 @@
+# Netlify Configuration pour Mittel'art 2026
+# Documentation: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Dossier de publication (racine du site)
+  publish = "."
+
+  # Commande de build (aucune pour un site statique)
+  command = ""
+
+# En-têtes HTTP pour améliorer les performances et la sécurité
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Sécurité
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+    # Performance - Cache par défaut pour HTML
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Cache pour CSS et JavaScript (1 an)
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache pour les images (1 an)
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache pour les polices (1 an)
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirection pour forcer HTTPS
+[[redirects]]
+  from = "http://mittelart-2026.netlify.app/*"
+  to = "https://mittelart-2026.netlify.app/:splat"
+  status = 301
+  force = true
+
+# Optimisation des assets
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# Plugin Netlify pour optimiser les performances
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  # Configuration optionnelle pour Lighthouse
+  [plugins.inputs]
+    output_path = "reports/lighthouse.html"
