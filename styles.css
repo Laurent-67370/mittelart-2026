@@ -781,6 +781,111 @@
             color: var(--accent-magenta);
         }
 
+        .contact-social {
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: linear-gradient(135deg,
+                rgba(26, 75, 140, 0.05) 0%,
+                rgba(107, 71, 153, 0.05) 100%);
+            border-radius: 20px;
+            border: 1px solid rgba(107, 71, 153, 0.1);
+        }
+
+        .contact-social h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-purple);
+        }
+
+        .contact-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            min-width: 140px;
+            background: var(--light);
+            border-radius: 16px;
+            border: 2px solid rgba(107, 71, 153, 0.15);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-social-link svg {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-social-link span {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--dark);
+            transition: color 0.3s ease;
+        }
+
+        .contact-social-link:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-social-link:hover svg {
+            transform: scale(1.15);
+        }
+
+        .contact-social-link.facebook {
+            color: #1877f2;
+        }
+
+        .contact-social-link.facebook:hover {
+            background: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .contact-social-link.facebook:hover span {
+            color: white;
+        }
+
+        .contact-social-link.instagram {
+            color: #e4405f;
+        }
+
+        .contact-social-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: #bc1888;
+        }
+
+        .contact-social-link.instagram:hover span {
+            color: white;
+        }
+
+        .contact-social-link.website {
+            color: var(--primary-blue);
+        }
+
+        .contact-social-link.website:hover {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
+        }
+
+        .contact-social-link.website:hover span {
+            color: white;
+        }
+
+        .contact-social-link.website:hover svg {
+            stroke: white;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(135deg, 
@@ -827,6 +932,60 @@
         .footer-text {
             color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            stroke: currentColor;
+        }
+
+        .social-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-link.facebook:hover {
+            background: #1877f2;
+            border-color: #1877f2;
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            border-color: #bc1888;
+        }
+
+        .social-link.email:hover {
+            background: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+        }
+
+        .social-link.website:hover {
+            background: var(--primary-blue);
+            border-color: var(--primary-blue);
         }
 
         .footer-links {
@@ -987,6 +1146,46 @@
 
             .hero-date {
                 font-size: 1.8rem;
+            }
+
+            .footer-social {
+                gap: 1rem;
+            }
+
+            .social-link {
+                width: 42px;
+                height: 42px;
+            }
+
+            .social-link svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .contact-social {
+                padding: 1.5rem;
+            }
+
+            .contact-social h3 {
+                font-size: 1.5rem;
+            }
+
+            .contact-social-links {
+                gap: 1rem;
+            }
+
+            .contact-social-link {
+                min-width: 100px;
+                padding: 1rem;
+            }
+
+            .contact-social-link svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .contact-social-link span {
+                font-size: 0.85rem;
             }
         }
 
