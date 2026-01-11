@@ -44,6 +44,10 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
   - Copie de lien avec notification
 - 🖼️ Galerie d'images avec lightbox
 - 🗺️ Google Maps intégré pour localisation
+- 🌐 Réseaux sociaux :
+  - Section dans le footer avec icônes circulaires
+  - Section "Suivez-nous" dans Contact avec cartes interactives
+  - Liens Facebook, Instagram et site web Henri Husser
 
 ### SEO & Performance
 - 🔍 SEO optimisé avec métadonnées complètes
@@ -60,6 +64,7 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 - 🏷️ Attributs alt sur toutes les images
 - 🎨 Contrastes WCAG conformes
 - 📱 Touch-friendly pour mobile
+- 🔐 Sécurité : rel="noopener noreferrer" sur liens externes
 
 ---
 
@@ -209,12 +214,33 @@ python3 -m http.server 8000
 
 ---
 
+## 📱 Réseaux sociaux
+
+### Intégrations
+- **Facebook** : https://www.facebook.com/mittelart
+- **Instagram** : https://www.instagram.com/mittelart
+- **Site web** : https://lhusser.fr (Henri Husser)
+- **Email** : contact@mittelart.fr
+
+### Design
+- **Footer** : Icônes circulaires (48px) avec effet glassmorphism
+- **Contact** : Cartes interactives avec hover animé
+- **Couleurs** :
+  - Facebook : #1877f2
+  - Instagram : Gradient multicolore officiel
+  - Email : Cyan
+  - Site web : Bleu primaire
+
+---
+
 ## 📧 Contact
 
 Pour toute question sur le site ou l'exposition :
 - **Email** : contact@mittelart.fr
 - **Organisateur** : Henri Husser
 - **Association** : ASCH (Association Socioculturelle de Hausbergen)
+- **Facebook** : https://www.facebook.com/mittelart
+- **Instagram** : https://www.instagram.com/mittelart
 
 ---
 
@@ -235,6 +261,25 @@ Organisé par Henri Husser avec la participation de l'ASCH
 - **Groupe Steinmetz** : Sponsor
 - **CG Photogravure** : Partenaire impression
 - **Tous les artistes participants** : Pour leur talent et engagement
+
+---
+
+## 🔄 Changelog
+
+### Version 2.0 (Janvier 2026)
+- ✅ Séparation CSS/JS pour meilleure performance
+- ✅ Ajout réseaux sociaux (Footer + Contact)
+- ✅ Optimisation SEO (sitemap.xml, robots.txt)
+- ✅ Configuration cache Netlify
+- ✅ Amélioration accessibilité
+- ✅ Réduction 60% taille HTML
+
+### Version 1.0 (Décembre 2025)
+- 🎉 Lancement initial du site
+- ✨ Design responsive complet
+- 📅 Intégrations calendrier
+- 🗺️ Google Maps
+- 🖼️ Galerie lightbox
 
 ---
 
