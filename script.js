@@ -364,3 +364,18 @@
 
         // Generate avatar colors on load
         document.addEventListener('DOMContentLoaded', generateAvatarColors);
+
+        // ========== FLIP CARDS ON CLICK ==========
+        function initFlipCards() {
+            const artisteItems = document.querySelectorAll('.artiste-item');
+
+            artisteItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    // Toggle flipped class
+                    this.classList.toggle('flipped');
+                });
+            });
+        }
+
+        // Initialize flip cards on load
+        document.addEventListener('DOMContentLoaded', initFlipCards);
