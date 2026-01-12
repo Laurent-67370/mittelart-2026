@@ -300,7 +300,9 @@
                 { selector: '.partner-item', class: 'scroll-animate-scale' },
                 { selector: '.contact-card', class: 'scroll-animate' },
                 { selector: '.retour-card', class: 'scroll-animate' },
-                { selector: '.founder-section', class: 'scroll-animate' }
+                { selector: '.founder-section', class: 'scroll-animate' },
+                { selector: '.artistes-stats .stat-category', class: 'scroll-animate-scale' },
+                { selector: '.artiste-item', class: 'scroll-animate-scale' }
             ];
 
             animateElements.forEach(item => {
@@ -333,3 +335,32 @@
 
         // Lancer les animations au chargement
         document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+        // ========== DYNAMIC AVATAR COLORS ==========
+        function generateAvatarColors() {
+            const avatars = document.querySelectorAll('.artiste-avatar');
+
+            avatars.forEach((avatar) => {
+                const initials = avatar.getAttribute('data-initials');
+                if (!initials) return;
+
+                // Generate unique colors based on initials
+                const hash = initials.split('').reduce((acc, char) => {
+                    return char.charCodeAt(0) + ((acc << 5) - acc);
+                }, 0);
+
+                // Create two complementary hues for gradient
+                const hue1 = Math.abs(hash % 360);
+                const hue2 = (hue1 + 60) % 360; // Offset by 60 degrees for harmony
+
+                // Use high saturation and medium-high lightness for vibrant colors
+                const color1 = `hsl(${hue1}, 70%, 55%)`;
+                const color2 = `hsl(${hue2}, 70%, 45%)`;
+
+                // Apply gradient
+                avatar.style.background = `linear-gradient(135deg, ${color1} 0%, ${color2} 100%)`;
+            });
+        }
+
+        // Generate avatar colors on load
+        document.addEventListener('DOMContentLoaded', generateAvatarColors);
