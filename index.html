@@ -551,107 +551,332 @@
             <span class="section-badge">🎨 Artistes</span>
             <h2 class="section-title">Les artistes exposants 2026</h2>
             <p class="section-subtitle">Découvrez les 25 artistes peintres et sculpteurs qui exposeront leurs œuvres</p>
+
+            <!-- Statistiques par catégorie -->
+            <div class="artistes-stats">
+                <div class="stat-category">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    <span class="stat-number">17</span>
+                    <span class="stat-label">Peintres</span>
+                </div>
+                <div class="stat-category">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    <span class="stat-number">5</span>
+                    <span class="stat-label">Sculpteurs</span>
+                </div>
+                <div class="stat-category">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H4.5C3.67 4 3 4.67 3 5.5V9h2V6z"/>
+                    </svg>
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Multi-talents</span>
+                </div>
+            </div>
         </div>
         <div class="artistes-grid">
-            <div class="artiste-item">
-                <div class="artiste-specialty">Sculptures</div>
-                <h4>Daniel Jung Hemmerle</h4>
+            <div class="artiste-item" data-specialty="sculpture">
+                <div class="artiste-avatar" data-initials="DJ"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Sculptures
+                    </div>
+                    <h4>Daniel Jung Hemmerle</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Photoplasticien</div>
-                <h4>Jean-Jacques Helwig</h4>
+            <div class="artiste-item" data-specialty="photo">
+                <div class="artiste-avatar" data-initials="JH"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H4.5C3.67 4 3 4.67 3 5.5V9h2V6z"/>
+                        </svg>
+                        Photoplasticien
+                    </div>
+                    <h4>Jean-Jacques Helwig</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures & Sculptures</div>
-                <h4>Solange Kiessling</h4>
+            <div class="artiste-item" data-specialty="mixed">
+                <div class="artiste-avatar" data-initials="SK"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H4.5C3.67 4 3 4.67 3 5.5V9h2V6z"/>
+                        </svg>
+                        Peintures & Sculptures
+                    </div>
+                    <h4>Solange Kiessling</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Sculptures</div>
-                <h4>Anne Lombards</h4>
+            <div class="artiste-item" data-specialty="sculpture">
+                <div class="artiste-avatar" data-initials="AL"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Sculptures
+                    </div>
+                    <h4>Anne Lombards</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Victor Grusevin</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="VG"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Victor Grusevin</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Henri Husser</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="HH"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Henri Husser</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Brigitte Di Scala</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="BD"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Brigitte Di Scala</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>René Roth</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="RR"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>René Roth</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Eliane Karakaya</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="EK"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Eliane Karakaya</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Simone Burger</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="SB"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Simone Burger</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Françoise Mraillet</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="FM"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Françoise Mraillet</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Sculptures</div>
-                <h4>Paul Riethmüller</h4>
+            <div class="artiste-item" data-specialty="sculpture">
+                <div class="artiste-avatar" data-initials="PR"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Sculptures
+                    </div>
+                    <h4>Paul Riethmüller</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Peggy Vullianz</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="PV"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Peggy Vullianz</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures Acryliques</div>
-                <h4>Véronique Ball</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="VB"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures Acryliques
+                    </div>
+                    <h4>Véronique Ball</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Patrick Charbold</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="PC"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Patrick Charbold</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Sculptures</div>
-                <h4>Suzanne Capdevielle</h4>
+            <div class="artiste-item" data-specialty="sculpture">
+                <div class="artiste-avatar" data-initials="SC"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Sculptures
+                    </div>
+                    <h4>Suzanne Capdevielle</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Jordane Desjardins</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="JD"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Jordane Desjardins</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures & Sculptures</div>
-                <h4>Roland Perret</h4>
+            <div class="artiste-item" data-specialty="mixed">
+                <div class="artiste-avatar" data-initials="RP"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 6h-3.17L16 4h-6v2h5.12l1.83 2H21v12H5v-9H3v9c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM8 14c0 2.76 2.24 5 5 5s5-2.24 5-5-2.24-5-5-5-5 2.24-5 5zm5-3c1.65 0 3 1.35 3 3s-1.35 3-3 3-3-1.35-3-3 1.35-3 3-3zM5 6h3V4H4.5C3.67 4 3 4.67 3 5.5V9h2V6z"/>
+                        </svg>
+                        Peintures & Sculptures
+                    </div>
+                    <h4>Roland Perret</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Laurence Scheer</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="LS"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Laurence Scheer</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Sculptures</div>
-                <h4>Nicole Kopf</h4>
+            <div class="artiste-item" data-specialty="sculpture">
+                <div class="artiste-avatar" data-initials="NK"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Sculptures
+                    </div>
+                    <h4>Nicole Kopf</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Sophie Gouynon</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="SG"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Sophie Gouynon</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Stefan Beutelspacher</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="SB"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Stefan Beutelspacher</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Corinne Marino</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="CM"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Corinne Marino</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Claude Mato</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="CM"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Claude Mato</h4>
+                </div>
             </div>
-            <div class="artiste-item">
-                <div class="artiste-specialty">Peintures</div>
-                <h4>Jocelyne Clerc</h4>
+            <div class="artiste-item" data-specialty="peinture">
+                <div class="artiste-avatar" data-initials="JC"></div>
+                <div class="artiste-info">
+                    <div class="artiste-specialty">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Peintures
+                    </div>
+                    <h4>Jocelyne Clerc</h4>
+                </div>
             </div>
         </div>
     </section>
