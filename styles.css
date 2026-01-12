@@ -326,6 +326,8 @@
         /* Sections */
         section {
             padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
         }
 
         .section-header {
@@ -784,8 +786,10 @@
 
         /* Artistes Section */
         .artistes {
-            padding: 6rem 2rem;
+            padding: 6rem 2rem 8rem 2rem;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: visible;
         }
 
         .artistes .section-title {
@@ -847,6 +851,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
+            padding-bottom: 2rem;
         }
 
         /* Carte artiste */
@@ -1051,6 +1056,10 @@
         }
 
         @media (max-width: 768px) {
+            .artistes {
+                padding: 4rem 1.5rem 6rem 1.5rem;
+            }
+
             .artistes-stats {
                 gap: 0.8rem;
                 margin-top: 1.5rem;
@@ -1072,6 +1081,7 @@
             .artistes-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.9rem;
+                padding-bottom: 1.5rem;
             }
 
             .artiste-item {
@@ -1126,6 +1136,10 @@
         }
 
         @media (max-width: 480px) {
+            .artistes {
+                padding: 3rem 1rem 5rem 1rem;
+            }
+
             .artistes-stats {
                 gap: 0.6rem;
                 margin-top: 1.2rem;
@@ -1147,6 +1161,7 @@
             .artistes-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.7rem;
+                padding-bottom: 1rem;
             }
 
             .artiste-item {
@@ -1404,6 +1419,7 @@
 
             section {
                 padding: 4rem 1.5rem;
+                overflow: visible;
             }
         }
 
