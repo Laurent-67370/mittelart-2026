@@ -851,41 +851,140 @@
 
         /* Carte artiste */
         .artiste-item {
-            background: var(--light);
+            background: transparent;
             padding: 0;
+            border-radius: 20px;
+            overflow: visible;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            perspective: 1000px;
+            height: 320px;
+        }
+
+        /* Structure flip */
+        .artiste-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .artiste-item:hover .artiste-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Faces de la carte */
+        .artiste-card-front,
+        .artiste-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: var(--light);
+        }
+
+        .artiste-card-front {
             border: 2px solid transparent;
-            cursor: pointer;
+            transition: border-color 0.3s ease;
         }
 
-        .artiste-item:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(107, 71, 153, 0.25);
-            border-color: var(--primary-purple);
+        .artiste-card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-purple) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
 
-        .artiste-item:active {
-            transform: translateY(-8px) scale(1.02);
+        /* Icône de spécialité */
+        .specialty-icon {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            z-index: 10;
+            opacity: 0.9;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s ease;
         }
 
-        /* Couleurs selon spécialité */
-        .artiste-item[data-specialty="peinture"] {
+        .artiste-item:hover .specialty-icon {
+            opacity: 1;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Couleurs des icônes selon spécialité */
+        .artiste-item[data-specialty="peinture"] .specialty-icon {
+            color: #f4c542;
+        }
+
+        .artiste-item[data-specialty="sculpture"] .specialty-icon {
+            color: #6b4799;
+        }
+
+        .artiste-item[data-specialty="photo"] .specialty-icon {
+            color: #00b4d8;
+        }
+
+        .artiste-item[data-specialty="mixed"] .specialty-icon {
+            color: #d64a7b;
+        }
+
+        /* Bordures selon spécialité */
+        .artiste-item[data-specialty="peinture"] .artiste-card-front {
             border-left: 4px solid #f4c542;
         }
 
-        .artiste-item[data-specialty="sculpture"] {
+        .artiste-item[data-specialty="sculpture"] .artiste-card-front {
             border-left: 4px solid #6b4799;
         }
 
-        .artiste-item[data-specialty="photo"] {
+        .artiste-item[data-specialty="photo"] .artiste-card-front {
             border-left: 4px solid #00b4d8;
         }
 
-        .artiste-item[data-specialty="mixed"] {
+        .artiste-item[data-specialty="mixed"] .artiste-card-front {
             border-left: 4px solid #d64a7b;
+        }
+
+        /* Verso de la carte */
+        .artiste-back-content {
+            color: white;
+            text-align: center;
+        }
+
+        .artiste-back-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .artiste-back-specialty {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+
+        .artiste-back-icon {
+            margin-top: 1rem;
+        }
+
+        .artiste-back-icon svg {
+            width: 48px;
+            height: 48px;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         /* Avatar avec initiales */
@@ -921,10 +1020,6 @@
             height: 200%;
             background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
             transform: translate(-50%, -50%);
-        }
-
-        .artiste-item:hover .artiste-avatar {
-            transform: scale(1.05);
         }
 
         /* Info artiste */
@@ -981,6 +1076,19 @@
 
             .artiste-item {
                 border-radius: 16px;
+                height: 280px;
+            }
+
+            .artiste-card-front,
+            .artiste-card-back {
+                border-radius: 16px;
+            }
+
+            .specialty-icon {
+                width: 26px;
+                height: 26px;
+                top: 10px;
+                right: 10px;
             }
 
             .artiste-avatar {
@@ -1001,6 +1109,19 @@
                 font-size: 0.6rem;
                 padding: 0.25rem 0.6rem;
                 letter-spacing: 0.5px;
+            }
+
+            .artiste-back-content h4 {
+                font-size: 1.2rem;
+            }
+
+            .artiste-back-specialty {
+                font-size: 0.75rem;
+            }
+
+            .artiste-back-icon svg {
+                width: 36px;
+                height: 36px;
             }
         }
 
@@ -1030,6 +1151,19 @@
 
             .artiste-item {
                 border-radius: 14px;
+                height: 250px;
+            }
+
+            .artiste-card-front,
+            .artiste-card-back {
+                border-radius: 14px;
+            }
+
+            .specialty-icon {
+                width: 22px;
+                height: 22px;
+                top: 8px;
+                right: 8px;
             }
 
             .artiste-avatar {
@@ -1053,14 +1187,29 @@
                 letter-spacing: 0.3px;
             }
 
-            /* Réduire l'effet hover sur mobile pour meilleure UX */
-            .artiste-item:hover {
-                transform: translateY(-5px) scale(1.01);
-                box-shadow: 0 12px 25px rgba(107, 71, 153, 0.2);
+            .artiste-back-content {
+                padding: 1rem;
             }
 
-            .artiste-item:active {
-                transform: translateY(-3px) scale(1.005);
+            .artiste-back-content h4 {
+                font-size: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .artiste-back-specialty {
+                font-size: 0.65rem;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+            }
+
+            .artiste-back-icon svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            /* Désactiver le flip sur mobile tactile, utiliser tap */
+            .artiste-item:active .artiste-card-inner {
+                transform: rotateY(180deg);
             }
         }
         /* Footer */
