@@ -836,8 +836,42 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
             color: var(--dark);
-            margin: 0;
+            margin: 0 0 0.75rem 0;
             font-weight: 600;
+        }
+
+        .artiste-contact {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .artiste-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(107, 71, 153, 0.08);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary-purple);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(107, 71, 153, 0.2);
+        }
+
+        .artiste-link svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+
+        .artiste-link:hover {
+            background: var(--primary-purple);
+            color: var(--light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(107, 71, 153, 0.3);
         }
 
         @media (max-width: 768px) {
