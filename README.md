@@ -15,7 +15,43 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 | **Horaires** | Samedi 14h-19h / Dimanche 10h-19h |
 | **Entrée** | Gratuite |
 | **Organisateur** | Henri Husser avec l'ASCH |
-| **Artistes** | 25+ artistes peintres et sculpteurs |
+| **Artistes** | 25 artistes peintres et sculpteurs |
+
+---
+
+## 🎨 Les 25 Artistes Exposants 2026
+
+### Répartition par spécialité
+- **16 Peintres**
+- **4 Sculpteurs**
+- **5 Multi-talents** (Peintures & Sculptures, Photoplasticien, Artiste Verrier)
+
+### Liste complète des artistes
+1. **Daniel Jung** — Peintures & Sculptures
+2. **Jean-Jacques Helwig** — Photoplasticien
+3. **Solange Kiessling** — Peintures & Sculptures
+4. **Jocelyne Clerc** — Peintures
+5. **Claude Mato** — Artiste Verrier
+6. **Ève Guerrier** — Peintures
+7. **Stefan Beiu** — Peintures
+8. **Anne Lombardi** — Sculptures
+9. **Victor Grusevan** — Peintures
+10. **Henri Husser** — Peintures
+11. **Brigitte Di Scala** — Peintures
+12. **René Roth** — Peintures
+13. **Éliane Karakaya** — Peintures
+14. **Simone Burger** — Peintures
+15. **Françoise Maillet** — Peintures
+16. **Paul Riethmuller** — Sculptures
+17. **Peggy Nullans** — Peintures
+18. **Patrick Chaboud** — Peintures
+19. **Véronique Ball** — Peintures & Sculptures
+20. **Nicole Kopp** — Sculptures
+21. **Laurence Scheer** — Peintures
+22. **Jordane Desjardins** — Peintures
+23. **Roland Perret** — Peintures
+24. **Suzanne Capdevielle** — Sculptures
+25. **Sophie Gouvion** — Peintures
 
 ---
 
@@ -265,6 +301,15 @@ Organisé par Henri Husser avec la participation de l'ASCH
 ---
 
 ## 🔄 Changelog
+
+### Version 2.1 (Janvier 2026)
+- ✅ Mise à jour complète de la liste des exposants
+- ✅ Ajout d'Ève Guerrier (nouvel artiste)
+- ✅ Réordonnancement de la liste des 25 artistes
+- ✅ Corrections de noms d'artistes (Lombardi, Grusevan, Maillet, etc.)
+- ✅ Mise à jour des spécialités (Claude Mato → Artiste Verrier, etc.)
+- ✅ Mise à jour des statistiques : 16 Peintres, 4 Sculpteurs, 5 Multi-talents
+- ✅ Documentation complète dans README.md
 
 ### Version 2.0 (Janvier 2026)
 - ✅ Séparation CSS/JS pour meilleure performance
