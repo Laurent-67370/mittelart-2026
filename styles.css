@@ -676,24 +676,42 @@
         }
 
         .partners-grid {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 3.5rem;
             align-items: center;
             justify-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .partner-item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .partner-item:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
         }
 
         .partner-item svg,
         .partner-item img {
-            max-width: 180px;
-            max-height: 80px;
+            max-width: 220px;
+            max-height: 90px;
             width: 100%;
             height: auto;
-            filter: grayscale(100%);
-            opacity: 0.7;
-            transition: all 0.3s ease;
+            filter: grayscale(20%);
+            opacity: 0.85;
+            transition: all 0.4s ease;
             object-fit: contain;
         }
 
@@ -701,7 +719,21 @@
         .partner-item img:hover {
             filter: grayscale(0%);
             opacity: 1;
-            transform: scale(1.05);
+            transform: scale(1.02);
+        }
+
+        /* Responsive ajustements pour les partenaires */
+        @media (max-width: 768px) {
+            .partners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 2rem;
+            }
+
+            .partner-item svg,
+            .partner-item img {
+                max-width: 180px;
+                max-height: 75px;
+            }
         }
 
         /* Contact Section */
