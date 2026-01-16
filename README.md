@@ -291,6 +291,7 @@ Organisé par Henri Husser avec la participation de l'ASCH
 
 - **Henri Husser** : Fondateur et organisateur
 - **ASCH** : Association partenaire
+- **Ville de Mittelhausbergen** : Soutien de la commune hôte
 - **Collectivité Européenne d'Alsace** : Soutien institutionnel
 - **Crédit Mutuel** : Partenaire financier
 - **Le Géant des Beaux-Arts** : Partenaire matériel
@@ -309,6 +310,9 @@ Organisé par Henri Husser avec la participation de l'ASCH
 - ✅ Corrections de noms d'artistes (Lombardi, Grusevan, Maillet, etc.)
 - ✅ Mise à jour des spécialités (Claude Mato → Artiste Verrier, etc.)
 - ✅ Mise à jour des statistiques : 16 Peintres, 4 Sculpteurs, 5 Multi-talents
+- ✅ Amélioration visuelle des logos partenaires (fidélité à l'affiche)
+- ✅ Ajout du logo de la Ville de Mittelhausbergen
+- ✅ Corrections textes partenaires (Coteaux de Hausbergen, Eckbolsheim)
 - ✅ Documentation complète dans README.md
 
 ### Version 2.0 (Janvier 2026)
