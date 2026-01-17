@@ -41,7 +41,7 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 12. **René Roth** — Peintures
 13. **Éliane Karakaya** — Peintures
 14. **Simone Burger** — Peintures
-15. **Françoise Maillet** — Peinture et Arts Textile
+15. **Françoise Maillet** — Peintures et Arts Textile
 16. **Paul Riethmuller** — Sculptures
 17. **Peggy Nullans** — Peintures
 18. **Patrick Chaboud** — Peintures
