@@ -898,6 +898,8 @@
             cursor: pointer;
             perspective: 1000px;
             height: 320px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
         }
 
         /* Structure flip */
