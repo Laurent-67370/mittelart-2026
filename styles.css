@@ -1334,14 +1334,14 @@
             .artiste-card-back .artiste-contact .artiste-link,
             .artiste-card-back .artiste-contact a.artiste-link,
             .artiste-item.flipped .artiste-card-back .artiste-link {
-                font-size: 0.7rem;
-                padding: 0.5rem 0.6rem;
-                gap: 0.4rem;
+                font-size: 0.6rem;
+                padding: 0.45rem 0.5rem;
+                gap: 0.3rem;
             }
 
             .artiste-card-back .artiste-link svg {
-                width: 14px;
-                height: 14px;
+                width: 12px;
+                height: 12px;
             }
         }
         /* Footer */
