@@ -1040,6 +1040,9 @@
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.25);
             border: 1px solid rgba(255, 255, 255, 0.4);
+            word-break: break-word;
+            overflow-wrap: anywhere;
+            max-width: 100%;
         }
 
         .artiste-card-back .artiste-contact .artiste-link:visited,
@@ -1222,9 +1225,17 @@
                 font-size: 0.75rem;
             }
 
-            .artiste-link {
-                font-size: 0.7rem;
-                padding: 0.35rem 0.5rem;
+            .artiste-card-back .artiste-contact .artiste-link,
+            .artiste-card-back .artiste-contact a.artiste-link,
+            .artiste-item.flipped .artiste-card-back .artiste-link {
+                font-size: 0.75rem;
+                padding: 0.5rem 0.65rem;
+                gap: 0.45rem;
+            }
+
+            .artiste-card-back .artiste-link svg {
+                width: 15px;
+                height: 15px;
             }
 
             .artiste-back-icon svg {
@@ -1318,6 +1329,19 @@
             .artiste-back-icon svg {
                 width: 28px;
                 height: 28px;
+            }
+
+            .artiste-card-back .artiste-contact .artiste-link,
+            .artiste-card-back .artiste-contact a.artiste-link,
+            .artiste-item.flipped .artiste-card-back .artiste-link {
+                font-size: 0.7rem;
+                padding: 0.5rem 0.6rem;
+                gap: 0.4rem;
+            }
+
+            .artiste-card-back .artiste-link svg {
+                width: 14px;
+                height: 14px;
             }
         }
         /* Footer */
