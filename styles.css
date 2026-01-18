@@ -912,21 +912,21 @@ section {
 
 .search-input {
     width: 100%;
-    padding: 0.9rem 1.2rem 0.9rem 3rem;
+    padding: 0.75rem 3rem 0.75rem 2.5rem;
     border-radius: 50px;
-    border: 2px solid rgba(107, 71, 153, 0.2);
+    border: 1px solid rgba(107, 71, 153, 0.2);
     background: white;
     color: var(--text-dark);
     font-family: 'Outfit', sans-serif;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .search-input:focus {
     outline: none;
     border-color: var(--primary-purple);
-    box-shadow: 0 6px 20px rgba(107, 71, 153, 0.15);
+    box-shadow: 0 4px 12px rgba(107, 71, 153, 0.12);
 }
 
 .search-input::placeholder {
@@ -935,12 +935,12 @@ section {
 
 .search-icon {
     position: absolute;
-    left: 2rem;
+    left: 1.5rem;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    color: var(--primary-purple);
+    width: 16px;
+    height: 16px;
+    color: rgba(107, 71, 153, 0.5);
     pointer-events: none;
 }
 
