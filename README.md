@@ -91,7 +91,7 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 - 🌐 Réseaux sociaux :
   - Section dans le footer avec icônes circulaires
   - Section "Suivez-nous" dans Contact avec cartes interactives
-  - Liens Facebook, Instagram et site web Henri Husser
+  - Liens Facebook et Instagram
 
 ### SEO & Performance
 - 🔍 SEO optimisé avec métadonnées complètes
@@ -116,9 +116,9 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 
 ```
 mittelart-2026/
-├── index.html              # Page principale HTML (42 KB)
-├── styles.css              # Styles CSS (52 KB)
-├── script.js               # JavaScript (15 KB)
+├── index.html              # Page principale HTML (102 KB)
+├── styles.css              # Styles CSS (48 KB)
+├── script.js               # JavaScript (20 KB)
 ├── manifest.json           # PWA manifest (métadonnées app)
 ├── service-worker.js       # Service Worker (cache et offline)
 ├── sitemap.xml             # Sitemap pour SEO
@@ -126,27 +126,30 @@ mittelart-2026/
 ├── netlify.toml            # Configuration Netlify + cache
 ├── .gitignore              # Fichiers ignorés par Git
 │
-├── Logos partenaires
-│   ├── logo_ALSACE_Collectivite_europeenne.png    # Logo Alsace (11 KB)
-│   ├── logo_Credit_Mutuel.jpeg                     # Logo Crédit Mutuel (9.3 KB)
-│   ├── logo_Le_Geant_des_Beaux_Arts.png           # Logo Le Géant (8.2 KB)
+├── README.md               # Documentation principale
+├── GUIDE_PHOTOS.md         # Guide pour les photos d'œuvres
+├── IMAGE-OPTIMIZATION.md   # Guide optimisation images
+│
+├── Logos partenaires (fichiers à la racine)
+│   ├── logo_ALSACE_Collectivite_europeenne.png    # Logo Alsace (10 KB)
+│   ├── logo_Credit_Mutuel.jpeg                     # Logo Crédit Mutuel (9.2 KB)
+│   ├── logo_Le_Geant_des_Beaux_Arts.png           # Logo Le Géant (8.1 KB)
 │   ├── logo_Groupe_Steinmetz.jpeg                  # Logo Steinmetz (8.1 KB)
-│   ├── logo_CG_Photogravure.png                    # Logo CG Photo (24 KB)
+│   ├── logo_CG_Photogravure.png                    # Logo CG Photo (23 KB)
 │   └── logo_Mittelhausbergen.jpeg                  # Logo Ville (4.7 KB)
 │
-├── Images
+├── Images (fichiers à la racine)
 │   ├── poster-2026.png             # Affiche 2026 (647 KB)
 │   ├── og-image.jpg                # Image Open Graph (248 KB)
 │   ├── flyer.jpg                   # Affiche édition 2025 (345 KB)
 │   ├── article-dna.jpg             # Article presse DNA (336 KB)
 │   └── article-sculptures.jpg      # Article sculptures (358 KB)
 │
-├── Documentation
-│   ├── README.md                   # Ce fichier
-│   └── IMAGE-OPTIMIZATION.md       # Guide optimisation images
+├── artistes/               # Dossier pour photos des artistes
+│   └── README.md           # Instructions pour les photos
 │
-└── Sauvegarde
-    └── index.html.backup           # Ancienne version (98 KB)
+└── logos/                  # Dossier pour organisation des logos
+    └── README.md           # Documentation logos
 ```
 
 ---
@@ -232,7 +235,6 @@ mittelart-2026/
 ## 📊 Performance
 
 ### Optimisations réalisées
-- ✅ Réduction de 60% de la taille HTML (98 KB → 42 KB)
 - ✅ Séparation CSS/JS pour meilleur cache
 - ✅ **Progressive Web App** : Cache intelligent et offline
 - ✅ **Service Worker** : Chargement ultra-rapide après première visite
@@ -240,6 +242,7 @@ mittelart-2026/
 - ✅ Compression gzip/brotli activée
 - ✅ Minification CSS/JS automatique
 - ✅ Network First Strategy : Toujours la version la plus récente
+- ✅ Ajout des coordonnées des artistes sur leurs cartes
 
 ### Prochaines optimisations recommandées
 - 🔄 Conversion images PNG → WebP (-75% de poids)
@@ -316,8 +319,7 @@ python3 -m http.server 8000
 ### Intégrations
 - **Facebook** : https://www.facebook.com/mittelart
 - **Instagram** : https://www.instagram.com/mittelart
-- **Site web** : https://lhusser.fr (Henri Husser)
-- **Email** : contact@mittelart.fr
+- **Email** : hehusser@estvideo.fr
 
 ### Design
 - **Footer** : Icônes circulaires (48px) avec effet glassmorphism
@@ -326,14 +328,13 @@ python3 -m http.server 8000
   - Facebook : #1877f2
   - Instagram : Gradient multicolore officiel
   - Email : Cyan
-  - Site web : Bleu primaire
 
 ---
 
 ## 📧 Contact
 
 Pour toute question sur le site ou l'exposition :
-- **Email** : contact@mittelart.fr
+- **Email** : hehusser@estvideo.fr
 - **Organisateur** : Henri Husser
 - **Association** : ASCH (Association Socioculturelle de Hausbergen)
 - **Facebook** : https://www.facebook.com/mittelart
