@@ -436,19 +436,40 @@ function initSearch() {
 
     if (!searchInput) return;
 
-    // Fonction de recherche
+    // Fonction de recherche combinée avec les filtres
     function performSearch() {
         const searchTerm = searchInput.value.toLowerCase().trim();
 
         // Afficher/masquer le bouton de réinitialisation
-        clearBtn.style.display = searchTerm ? 'flex' : 'none';
+        if (clearBtn) {
+            clearBtn.style.display = searchTerm ? 'flex' : 'none';
+        }
+
+        // Obtenir le filtre actif
+        const activeFilter = document.querySelector('.filter-btn.active');
+        const filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
 
         let visibleCount = 0;
 
         artistItems.forEach(item => {
-            const artistName = item.querySelector('.artiste-info h4, .artiste-card-front h4')?.textContent.toLowerCase() || '';
+            const artistName = item.querySelector('.artiste-info h4')?.textContent.toLowerCase() || '';
+            const specialty = item.getAttribute('data-specialty');
 
-            if (searchTerm === '' || artistName.includes(searchTerm)) {
+            // Vérifier si l'artiste correspond au filtre
+            let matchesFilter = false;
+            if (filterValue === 'all') {
+                matchesFilter = true;
+            } else if (filterValue === 'autre') {
+                matchesFilter = ['mixed', 'photo', 'verrier'].includes(specialty);
+            } else {
+                matchesFilter = specialty === filterValue;
+            }
+
+            // Vérifier si l'artiste correspond à la recherche
+            const matchesSearch = searchTerm === '' || artistName.includes(searchTerm);
+
+            // Afficher uniquement si les deux conditions sont remplies
+            if (matchesFilter && matchesSearch) {
                 item.classList.remove('hide');
                 item.classList.add('show');
                 visibleCount++;
@@ -458,23 +479,25 @@ function initSearch() {
             }
         });
 
-        // Si aucun résultat, on pourrait afficher un message (optionnel)
-        updateSearchResults(visibleCount);
+        // Afficher un message si aucun résultat
+        updateSearchResults(visibleCount, searchTerm);
     }
 
     // Fonction pour mettre à jour l'affichage des résultats
-    function updateSearchResults(count) {
+    function updateSearchResults(count, searchTerm) {
         // Supprimer l'ancien message s'il existe
         const existingMsg = document.querySelector('.search-results-message');
         if (existingMsg) existingMsg.remove();
 
         // Si pas de résultats, afficher un message
-        if (count === 0 && searchInput.value.trim() !== '') {
+        if (count === 0 && searchTerm !== '') {
             const message = document.createElement('div');
             message.className = 'search-results-message';
             message.textContent = 'Aucun artiste trouvé pour cette recherche';
             const grid = document.querySelector('.artistes-grid');
-            grid.parentNode.insertBefore(message, grid);
+            if (grid) {
+                grid.parentNode.insertBefore(message, grid);
+            }
         }
     }
 
@@ -482,21 +505,25 @@ function initSearch() {
     searchInput.addEventListener('input', performSearch);
 
     // Événement pour le bouton de réinitialisation
-    clearBtn.addEventListener('click', () => {
-        searchInput.value = '';
-        performSearch();
-        searchInput.focus();
-    });
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            performSearch();
+            searchInput.focus();
+        });
+    }
 
-    // Réinitialiser la recherche quand on clique sur un filtre
+    // Réapliquer la recherche quand on clique sur un filtre
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Si on clique sur un filtre, on garde la recherche active
-            // mais on réapplique les filtres combinés
-            setTimeout(performSearch, 50);
+            // Attendre que le filtre soit appliqué, puis réappliquer la recherche
+            setTimeout(performSearch, 100);
         });
     });
+
+    // Rendre la fonction accessible globalement pour la réutiliser
+    window.performArtistSearch = performSearch;
 }
 
 // Initialiser la recherche au chargement
