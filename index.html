@@ -485,6 +485,20 @@
             <button class="filter-btn" data-filter="autre">Autres Techniques</button>
         </div>
 
+        <div class="search-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+            <input
+                type="text"
+                id="artistSearch"
+                class="search-input"
+                placeholder="Rechercher un artiste par nom..."
+                autocomplete="off"
+            >
+            <button class="search-clear" id="clearSearch" style="display: none;">×</button>
+        </div>
+
         <div class="artistes-grid">
             <div class="artiste-item" data-specialty="mixed">
                 <div class="artiste-card-inner">
