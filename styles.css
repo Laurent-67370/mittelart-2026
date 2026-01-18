@@ -1228,6 +1228,26 @@ section {
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Image d'œuvre dans l'avatar (si disponible) */
+.artiste-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Masquer les initiales si une image est présente */
+.artiste-avatar:has(img)::before {
+    display: none;
+}
+
+.artiste-avatar:has(img)::after {
+    display: none;
+}
+
 .artiste-avatar::before {
     content: attr(data-initials);
     position: relative;
