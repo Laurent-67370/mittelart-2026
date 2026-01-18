@@ -427,3 +427,77 @@ function initFilters() {
 
 // Initialiser les filtres au chargement
 document.addEventListener('DOMContentLoaded', initFilters);
+
+// ========== SEARCH FUNCTIONALITY ==========
+function initSearch() {
+    const searchInput = document.getElementById('artistSearch');
+    const clearBtn = document.getElementById('clearSearch');
+    const artistItems = document.querySelectorAll('.artiste-item');
+
+    if (!searchInput) return;
+
+    // Fonction de recherche
+    function performSearch() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+
+        // Afficher/masquer le bouton de réinitialisation
+        clearBtn.style.display = searchTerm ? 'flex' : 'none';
+
+        let visibleCount = 0;
+
+        artistItems.forEach(item => {
+            const artistName = item.querySelector('.artiste-info h4, .artiste-card-front h4')?.textContent.toLowerCase() || '';
+
+            if (searchTerm === '' || artistName.includes(searchTerm)) {
+                item.classList.remove('hide');
+                item.classList.add('show');
+                visibleCount++;
+            } else {
+                item.classList.add('hide');
+                item.classList.remove('show');
+            }
+        });
+
+        // Si aucun résultat, on pourrait afficher un message (optionnel)
+        updateSearchResults(visibleCount);
+    }
+
+    // Fonction pour mettre à jour l'affichage des résultats
+    function updateSearchResults(count) {
+        // Supprimer l'ancien message s'il existe
+        const existingMsg = document.querySelector('.search-results-message');
+        if (existingMsg) existingMsg.remove();
+
+        // Si pas de résultats, afficher un message
+        if (count === 0 && searchInput.value.trim() !== '') {
+            const message = document.createElement('div');
+            message.className = 'search-results-message';
+            message.textContent = 'Aucun artiste trouvé pour cette recherche';
+            const grid = document.querySelector('.artistes-grid');
+            grid.parentNode.insertBefore(message, grid);
+        }
+    }
+
+    // Événement de saisie
+    searchInput.addEventListener('input', performSearch);
+
+    // Événement pour le bouton de réinitialisation
+    clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        performSearch();
+        searchInput.focus();
+    });
+
+    // Réinitialiser la recherche quand on clique sur un filtre
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Si on clique sur un filtre, on garde la recherche active
+            // mais on réapplique les filtres combinés
+            setTimeout(performSearch, 50);
+        });
+    });
+}
+
+// Initialiser la recherche au chargement
+document.addEventListener('DOMContentLoaded', initSearch);
