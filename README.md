@@ -57,6 +57,14 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 
 ## ✨ Fonctionnalités du site
 
+### Progressive Web App (PWA)
+- 📲 **Installable** : Ajoutez l'application sur votre écran d'accueil
+- 🔌 **Mode hors ligne** : Consultez le site même sans connexion
+- ⚡ **Performances** : Chargement ultra-rapide avec mise en cache
+- 🔄 **Mises à jour automatiques** : Toujours la dernière version
+- 📱 **Expérience native** : Fonctionne comme une vraie application
+- 🎯 **Raccourcis** : Accès direct aux sections (Artistes, Programme, Lieu)
+
 ### Design & Interface
 - 📱 Design 100% responsive (mobile, tablette, desktop)
 - 🎨 Palette de couleurs harmonisée avec l'identité visuelle
@@ -108,13 +116,23 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 
 ```
 mittelart-2026/
-├── index.html              # Page principale HTML (40 KB, optimisé)
-├── styles.css              # Styles CSS séparés (43 KB)
-├── script.js               # JavaScript séparé (15 KB)
+├── index.html              # Page principale HTML (42 KB)
+├── styles.css              # Styles CSS (52 KB)
+├── script.js               # JavaScript (15 KB)
+├── manifest.json           # PWA manifest (métadonnées app)
+├── service-worker.js       # Service Worker (cache et offline)
 ├── sitemap.xml             # Sitemap pour SEO
 ├── robots.txt              # Directives robots
 ├── netlify.toml            # Configuration Netlify + cache
 ├── .gitignore              # Fichiers ignorés par Git
+│
+├── Logos partenaires
+│   ├── logo_ALSACE_Collectivite_europeenne.png    # Logo Alsace (11 KB)
+│   ├── logo_Credit_Mutuel.jpeg                     # Logo Crédit Mutuel (9.3 KB)
+│   ├── logo_Le_Geant_des_Beaux_Arts.png           # Logo Le Géant (8.2 KB)
+│   ├── logo_Groupe_Steinmetz.jpeg                  # Logo Steinmetz (8.1 KB)
+│   ├── logo_CG_Photogravure.png                    # Logo CG Photo (24 KB)
+│   └── logo_Mittelhausbergen.jpeg                  # Logo Ville (4.7 KB)
 │
 ├── Images
 │   ├── poster-2026.png             # Affiche 2026 (647 KB)
@@ -140,6 +158,13 @@ mittelart-2026/
 - **CSS3** : Design moderne avec variables CSS, Grid, Flexbox
 - **JavaScript Vanilla** : Aucune dépendance, code pur ES6+
 
+### Progressive Web App (PWA)
+- **Web App Manifest** : Configuration de l'application installable
+- **Service Worker** : Cache stratégique et mode hors ligne
+- **Cache API** : Stockage local des ressources
+- **Network First Strategy** : Toujours la version la plus récente
+- **Offline Fallback** : Fonctionnement sans connexion
+
 ### APIs & Services
 - **Google Fonts** : Playfair Display + Outfit
 - **Google Maps** : Carte interactive intégrée
@@ -151,6 +176,7 @@ mittelart-2026/
 - **Cache headers** : 1 an pour assets statiques
 - **Compression** : Minification automatique CSS/JS
 - **Progressive Enhancement** : Fonctionne sans JavaScript
+- **PWA Caching** : Mise en cache intelligente avec Service Worker
 
 ---
 
@@ -171,14 +197,49 @@ mittelart-2026/
 
 ---
 
+## 📲 Installation de l'application (PWA)
+
+### Sur Mobile (Android)
+1. Ouvrez le site dans **Chrome** ou **Edge**
+2. Appuyez sur le menu ⋮ (trois points)
+3. Sélectionnez **"Ajouter à l'écran d'accueil"** ou **"Installer l'application"**
+4. Confirmez l'installation
+5. L'icône Mittel'art apparaît sur votre écran d'accueil
+
+### Sur Mobile (iOS)
+1. Ouvrez le site dans **Safari**
+2. Appuyez sur le bouton Partager 📤
+3. Faites défiler et sélectionnez **"Sur l'écran d'accueil"**
+4. Appuyez sur **"Ajouter"**
+5. L'application est maintenant accessible depuis l'écran d'accueil
+
+### Sur Desktop (Chrome, Edge)
+1. Ouvrez le site dans votre navigateur
+2. Cliquez sur l'icône **⊕ Installer** dans la barre d'adresse
+3. Ou Menu → **"Installer Mittel'art..."**
+4. Confirmez l'installation
+5. L'application s'ouvre dans une fenêtre dédiée
+
+### Avantages de l'installation
+- ⚡ **Lancement rapide** : Accès direct depuis l'écran d'accueil
+- 🔌 **Mode hors ligne** : Consultez le site sans connexion
+- 📲 **Expérience native** : Interface comme une vraie application
+- 🔔 **Mises à jour automatiques** : Toujours la dernière version
+- 💾 **Moins de data** : Cache intelligent pour économiser la bande passante
+
+---
+
 ## 📊 Performance
 
 ### Optimisations réalisées
-- ✅ Réduction de 60% de la taille HTML (98 KB → 40 KB)
+- ✅ Réduction de 60% de la taille HTML (98 KB → 42 KB)
 - ✅ Séparation CSS/JS pour meilleur cache
+- ✅ **Progressive Web App** : Cache intelligent et offline
+- ✅ **Service Worker** : Chargement ultra-rapide après première visite
 - ✅ Lazy loading des images
 - ✅ Compression gzip/brotli activée
 - ✅ Minification CSS/JS automatique
+- ✅ Network First Strategy : Toujours la version la plus récente
 
 ### Prochaines optimisations recommandées
 - 🔄 Conversion images PNG → WebP (-75% de poids)
@@ -302,6 +363,20 @@ Organisé par Henri Husser avec la participation de l'ASCH
 ---
 
 ## 🔄 Changelog
+
+### Version 2.2 PWA (Janvier 2026)
+- ✅ **Transformation en Progressive Web App (PWA)**
+  - 📲 Application installable sur mobile et desktop
+  - 🔌 Mode hors ligne complet avec Service Worker
+  - ⚡ Mise en cache intelligente pour performances optimales
+  - 🎯 Raccourcis d'application (Artistes, Programme, Lieu)
+  - 📱 Icônes et configuration pour Android, iOS et Desktop
+- ✅ Ajout du Web App Manifest (manifest.json)
+- ✅ Implémentation du Service Worker avec stratégie Network First
+- ✅ Coordonnées artistes sur cartes (Suzanne Capdevielle, Henri Husser)
+- ✅ Ajout "Coteaux de Hausbergen" sous logo Crédit Mutuel
+- ✅ Optimisation liens pleine largeur sur cartes artistes
+- ✅ Mise à jour complète de la documentation
 
 ### Version 2.1 (Janvier 2026)
 - ✅ Mise à jour complète de la liste des exposants
