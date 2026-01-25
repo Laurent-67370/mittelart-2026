@@ -88,6 +88,21 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
   - Copie de lien avec notification
 - 🖼️ Galerie d'images avec lightbox
 - 🗺️ Google Maps intégré pour localisation
+- 🎨 Cartes artistes interactives :
+  - Flip cards avec effet 3D (clic/tap pour retourner)
+  - Recto : photo, nom, spécialité
+  - Verso : coordonnées (site web, email, Facebook, Instagram)
+  - Liens pleine largeur optimisés mobile et desktop
+- 🔍 Recherche d'artistes en temps réel :
+  - Barre de recherche par nom ou spécialité
+  - Filtrage instantané des cartes
+  - Design moderne avec icône de recherche
+- 🏷️ Filtres par spécialité :
+  - Tous les artistes
+  - Peintures
+  - Sculptures
+  - Multi-talents
+- 🔗 Lien "Découvrir les artistes" dans la section accueil
 - 🌐 Réseaux sociaux :
   - Lien Facebook dans le footer avec icône circulaire
 
@@ -141,11 +156,11 @@ mittelart-2026/
 │
 └── logos/                  # Dossier logos partenaires
     ├── README.md                                   # Documentation logos
-    ├── logo_ALSACE_Collectivite_europeenne.png    # Logo Alsace (10 KB)
-    ├── logo_Credit_Mutuel.jpeg                     # Logo Crédit Mutuel (9.2 KB)
-    ├── logo_Le_Geant_des_Beaux_Arts.png           # Logo Le Géant (8.1 KB)
-    ├── logo_Groupe_Steinmetz.jpeg                  # Logo Steinmetz (8.1 KB)
-    ├── logo_CG_Photogravure.png                    # Logo CG Photo (23 KB)
+    ├── logo_ALSACE_Collectivite_europeenne.png    # Logo Alsace (11 KB)
+    ├── logo_Credit_Mutuel.jpeg                     # Logo Crédit Mutuel (9.3 KB)
+    ├── logo_Le_Geant_des_Beaux_Arts.png           # Logo Le Géant (8.2 KB)
+    ├── logo_Groupe_Steinmetz.jpeg                  # Logo Steinmetz (84 KB)
+    ├── logo_CG_Photogravure.png                    # Logo CG Photo (24 KB)
     └── logo_Mittelhausbergen.jpeg                  # Logo Ville (4.7 KB)
 ```
 
@@ -239,7 +254,11 @@ mittelart-2026/
 - ✅ Compression gzip/brotli activée
 - ✅ Minification CSS/JS automatique
 - ✅ Network First Strategy : Toujours la version la plus récente
-- ✅ Ajout des coordonnées des artistes sur leurs cartes
+- ✅ **Cartes artistes interactives** : Flip 3D optimisé CSS pure (sans JS)
+- ✅ **Recherche en temps réel** : Filtrage performant avec JavaScript natif
+- ✅ **Logos partenaires** : Format PNG/JPEG optimisé pour web
+- ✅ Coordonnées complètes des artistes sur leurs cartes (15+ artistes)
+- ✅ Navigation améliorée avec réorganisation logique des sections
 
 ### Prochaines optimisations recommandées
 - 🔄 Conversion images PNG → WebP (-75% de poids)
@@ -356,6 +375,39 @@ Organisé par Henri Husser avec la participation de l'ASCH
 ---
 
 ## 🔄 Changelog
+
+### Version 2.3 (Janvier 2026)
+- ✅ **Fonctionnalité de recherche d'artistes**
+  - 🔍 Barre de recherche en temps réel par nom ou spécialité
+  - ⚡ Filtrage instantané des cartes artistes
+  - 🎨 Design moderne avec icône de recherche intégrée
+- ✅ **Filtres par spécialité**
+  - 🏷️ Boutons de filtrage : Tous / Peintures / Sculptures / Multi-talents
+  - 🎯 Affichage dynamique selon la sélection
+- ✅ **Amélioration des cartes artistes**
+  - 🔄 Cartes flip 3D interactives (clic/tap pour retourner)
+  - 📱 Optimisation affichage mobile et desktop
+  - 🔗 Liens pleine largeur pour meilleure accessibilité
+  - ✉️ Ajout coordonnées pour 15+ artistes (email, site web, réseaux sociaux)
+  - 🎨 Amélioration lisibilité des liens sur fond bleu
+  - 📏 Police agrandie pour meilleure lecture
+- ✅ **Réorganisation de la navigation**
+  - 📍 Repositionnement section "Artistes" après "À propos"
+  - 📅 Repositionnement section "Édition 2025" après "Programme"
+  - 🔗 Ajout lien "Découvrir les artistes" dans la section accueil
+  - 📋 Mise à jour de l'ordre du menu et du footer
+- ✅ **Amélioration logos partenaires**
+  - 🖼️ Remplacement logos SVG par PNG/JPEG officiels
+  - 📁 Réorganisation dans le dossier logos/ avec documentation
+  - 🎨 Amélioration visuelle pour fidélité à l'affiche
+  - 🏛️ Ajout logo Ville de Mittelhausbergen
+  - ✏️ Corrections textes partenaires
+- ✅ **Logo Groupe Steinmetz**
+  - 🔄 Mise à jour avec nouveau logo officiel
+  - 📐 Optimisation de l'affichage
+- ✅ Correction spécialité Françoise Maillet : "Peinture et Arts Textile"
+- ✅ Optimisation flip cards pour tous les écrans (PC/Mobile)
+- ✅ Mise à jour documentation README complète
 
 ### Version 2.2 PWA (Janvier 2026)
 - ✅ **Transformation en Progressive Web App (PWA)**
