@@ -1497,12 +1497,7 @@
                 </p>
             </div>
 
-            <form name="livre-or" method="POST" action="/thank-you" data-netlify="true" netlify-honeypot="bot-field" class="guestbook-form">
-                <!-- Honeypot pour spam -->
-                <p class="hidden">
-                    <label>Ne pas remplir : <input name="bot-field" /></label>
-                </p>
-
+            <form name="livre-or" method="POST" action="/thank-you" data-netlify="true" class="guestbook-form">
                 <input type="hidden" name="form-name" value="livre-or" />
 
                 <div class="form-grid">
@@ -1555,8 +1550,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="message">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-right: 0.4rem; color: var(--primary-purple);">
+                    <label for="message" style="font-size: 1.05rem; margin-bottom: 0.75rem; font-weight: 700;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 20px; height: 20px; display: inline-block; vertical-align: middle; margin-right: 0.5rem; color: var(--primary-purple);">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                         </svg>
                         Votre message <span class="required">*</span>
@@ -1564,7 +1559,7 @@
                     <textarea
                         id="message"
                         name="message"
-                        rows="6"
+                        rows="10"
                         placeholder="Partagez vos impressions sur l'exposition, les œuvres qui vous ont touché, ou laissez un message aux artistes..."
                         required
                     ></textarea>
