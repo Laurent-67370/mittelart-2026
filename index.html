@@ -90,6 +90,7 @@
                 <li><a href="#edition2025">Édition 2025</a></li>
                 <li><a href="#lieu">Lieu</a></li>
                 <li><a href="#partners">Partenaires</a></li>
+                <li><a href="#livre-or">Livre d'or</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="mobile-toggle" onclick="toggleMobileMenu()">
@@ -110,6 +111,7 @@
             <li><a href="#edition2025" onclick="toggleMobileMenu()">Édition 2025</a></li>
             <li><a href="#lieu" onclick="toggleMobileMenu()">Lieu</a></li>
             <li><a href="#partners" onclick="toggleMobileMenu()">Partenaires</a></li>
+            <li><a href="#livre-or" onclick="toggleMobileMenu()">Livre d'or</a></li>
             <li><a href="#contact" onclick="toggleMobileMenu()">Contact</a></li>
         </ul>
     </div>
@@ -1482,6 +1484,84 @@
             <div class="partner-item">
                 <img src="logos/logo_Mittelhausbergen.jpeg" alt="Ville de Mittelhausbergen" loading="lazy">
             </div>
+        </div>
+    </section>
+
+    <section class="guestbook" id="livre-or">
+        <div class="guestbook-content">
+            <div class="section-header">
+                <span class="section-badge">📖 Livre d'or</span>
+                <h2 class="section-title">Laissez votre empreinte</h2>
+                <p class="section-subtitle">
+                    Partagez vos impressions, vos coups de cœur ou simplement un petit mot pour les artistes et organisateurs
+                </p>
+            </div>
+
+            <form name="livre-or" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="guestbook-form">
+                <!-- Honeypot pour spam -->
+                <p class="hidden">
+                    <label>Ne pas remplir : <input name="bot-field" /></label>
+                </p>
+
+                <input type="hidden" name="form-name" value="livre-or" />
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Votre nom <span class="required">*</span></label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Jean Dupont"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Votre email <span class="optional">(optionnel)</span></label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="jean.dupont@exemple.fr"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Votre ville <span class="optional">(optionnel)</span></label>
+                    <input
+                        type="text"
+                        id="city"
+                        name="city"
+                        placeholder="Strasbourg, Mittelhausbergen..."
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message <span class="required">*</span></label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Partagez vos impressions sur l'exposition, les œuvres qui vous ont touché, ou laissez un message aux artistes..."
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-guestbook">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 20px; height: 20px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Signer le livre d'or
+                    </button>
+                </div>
+            </form>
+
+            <p class="guestbook-note">
+                💡 <strong>Astuce :</strong> Vos messages seront conservés précieusement et pourront être partagés pour inspirer les futures éditions !
+            </p>
         </div>
     </section>
 
