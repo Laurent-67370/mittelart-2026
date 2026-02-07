@@ -105,6 +105,13 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 - 🔗 Lien "Découvrir les artistes" dans la section accueil
 - 🌐 Réseaux sociaux :
   - Lien Facebook dans le footer avec icône circulaire
+- 📖 **Livre d'or interactif** :
+  - Formulaire de témoignages pour les visiteurs
+  - Champs : nom (obligatoire), email (optionnel), ville (optionnel), message (obligatoire)
+  - Intégration Netlify Forms pour collecte des messages
+  - Page de remerciement après soumission (thank-you.html)
+  - Design avec icônes et style cohérent avec le site
+  - Navigation ajoutée dans le menu principal et le footer
 
 ### SEO & Performance
 - 🔍 SEO optimisé avec métadonnées complètes
@@ -130,6 +137,7 @@ Site web officiel de l'exposition **Mittel'art 2026**, exposition de peintures e
 ```
 mittelart-2026/
 ├── index.html              # Page principale HTML (104 KB)
+├── thank-you.html          # Page de remerciement après soumission livre d'or
 ├── styles.css              # Styles CSS (48 KB)
 ├── script.js               # JavaScript (20 KB)
 ├── manifest.json           # PWA manifest (métadonnées app)
@@ -375,6 +383,15 @@ Organisé par Henri Husser avec la participation de l'ASCH
 ---
 
 ## 🔄 Changelog
+
+### Version 2.4 (Février 2026)
+- ✅ **Livre d'or interactif**
+  - 📖 Formulaire de témoignages pour les visiteurs
+  - 📝 Champs : nom (obligatoire), email (optionnel), ville (optionnel), message (obligatoire)
+  - 🔄 Intégration Netlify Forms pour collecte et stockage des messages
+  - 🙏 Page de remerciement personnalisée après soumission (thank-you.html)
+  - 🎨 Design avec icônes et style cohérent avec l'identité visuelle
+  - 🔗 Navigation ajoutée dans le menu principal et le footer
 
 ### Version 2.3 (Janvier 2026)
 - ✅ **Fonctionnalité de recherche d'artistes**
